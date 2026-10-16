@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "{мужская|женская}" формы подставляются по выбранному полу. -->
+<resources>
+    <!-- Tabs -->
+    <string name="tab_today">Сегодня</string>
+    <string name="tab_jar">Банка</string>
+    <string name="tab_kind">Добрые слова</string>
+    <string name="tab_me">Я</string>
+
+    <!-- Common -->
+    <string name="back">Назад</string>
+    <string name="next">Далее</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="edit">Изменить</string>
+    <string name="close">Закрыть</string>
+    <string name="nice">Ура!</string>
+    <string name="share">Поделиться</string>
+    <string name="another">Ещё</string>
+    <string name="keep">Сохранить</string>
+    <string name="settings">Настройки</string>
+    <string name="today">Сегодня</string>
+    <string name="yesterday">Вчера</string>
+    <string name="previous_month">Предыдущий месяц</string>
+    <string name="next_month">Следующий месяц</string>
+
+    <string name="greet_morning">Доброе утро</string>
+    <string name="greet_day">Добрый день</string>
+    <string name="greet_evening">Добрый вечер</string>
+    <string name="greet_night">Привет, ночная птица</string>
+
+    <plurals name="wins">
+        <item quantity="one">%d победа</item>
+        <item quantity="few">%d победы</item>
+        <item quantity="many">%d побед</item>
+        <item quantity="other">%d победы</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+        <item quantity="other">%d дня</item>
+    </plurals>
+
+    <!-- Today -->
+    <string name="praise_of_day">Похвала дня</string>
+    <string name="saved_to_kind">Сохранено в добрые слова</string>
+    <string name="have_win">У меня победа!</string>
+    <string name="have_win_sub">Крошечная или огромная — расскажи</string>
+    <string name="today_wins">Победы сегодня</string>
+    <string name="today_empty">Пока пусто. Кстати, подъём с кровати тоже считается.</string>
+    <string name="welcome_back">С возвращением</string>
+    <string name="evening_title">Три вещи, которыми я горжусь</string>
+    <string name="evening_cta">Закрой день тремя хорошими вещами</string>
+    <string name="sos">Мне плохо</string>
+    <string name="translator">Переводчик с самокритичного</string>
+    <string name="translator_sub">Превращает жёсткие мысли в добрые</string>
+    <string name="kind_random">Доброе слово</string>
+    <string name="kind_random_sub">Прочитай что-то хорошее о себе</string>
+
+    <!-- Add a win -->
+    <string name="add_title">Что получилось?</string>
+    <string name="add_hint">Даже самая мелочь считается</string>
+    <string name="add_size">Насколько это большое дело?</string>
+    <string name="size_tiny">Крошечная</string>
+    <string name="size_tiny_text">Маленькая, но моя</string>
+    <string name="size_solid">Хорошая</string>
+    <string name="size_solid_text">Пришлось постараться</string>
+    <string name="size_huge">Огромная</string>
+    <string name="size_huge_text">Это большое дело!</string>
+    <string name="add_category">Что это за победа?</string>
+    <string name="praise_me">Похвали меня!</string>
+    <string name="edit_win">Изменить победу</string>
+    <string name="delete_win">Удалить эту победу?</string>
+    <string name="delete_win_text">Она исчезнет из банки.</string>
+
+    <string name="cat_home">Дом</string>
+    <string name="cat_body">Тело</string>
+    <string name="cat_work">Работа</string>
+    <string name="cat_mind">Ум</string>
+    <string name="cat_people">Люди</string>
+    <string name="cat_brave">Смелость</string>
+    <string name="cat_care">Забота о себе</string>
+    <string name="cat_none">Другое</string>
+
+    <!-- Praise reveal -->
+    <string name="win_tiny">Крошечная победа</string>
+    <string name="win_solid">Хорошая победа</string>
+    <string name="win_huge">ОГРОМНАЯ победа</string>
+    <string name="thanks">Спасибо!</string>
+    <string name="another_win">Ещё победа</string>
+
+    <!-- Jar -->
+    <string name="jar_title">Банка побед</string>
+    <string name="jar_shake">Наклони или встряхни телефон. Нажми на камешек, чтобы вспомнить.</string>
+    <string name="jar_empty">Банка пока пустая. Первая победа сразу упадёт сюда.</string>
+    <string name="jar_list">Победы этого месяца</string>
+    <string name="jar_all">Все</string>
+    <string name="jar_huge_n">Огромных: %d</string>
+
+    <!-- Kind words -->
+    <string name="kind_title">Добрые слова</string>
+    <string name="kind_sub">Комплименты, которые стоит хранить. Перечитывай в трудные дни.</string>
+    <string name="kind_add">Добавить</string>
+    <string name="kind_shuffle">Вперемешку</string>
+    <string name="kind_empty">Сохраняй хорошее, что о тебе говорят: сообщение, отзыв, записку. Это доказательства на дни, когда забываешь.</string>
+    <string name="kind_new">Новые добрые слова</string>
+    <string name="kind_edit">Изменить добрые слова</string>
+    <string name="kind_text_hint">Что тебе сказали?</string>
+    <string name="kind_from_hint">Кто это сказал? (необязательно)</string>
+    <string name="kind_photo">Добавить скриншот</string>
+    <string name="kind_photo_remove">Убрать скриншот</string>
+    <string name="kind_delete">Удалить эти добрые слова?</string>
+    <string name="kind_delete_text">Они исчезнут из коллекции.</string>
+    <string name="kind_tap_next">Нажми, чтобы увидеть следующее</string>
+    <string name="kind_from">— %s</string>
+
+    <!-- Evening -->
+    <string name="evening_intro">Перед сном назови три вещи. Большие или маленькие, сделанные или просто пережитые.</string>
+    <string name="evening_1">Что у меня получилось</string>
+    <string name="evening_2">С чем я {справился|справилась}</string>
+    <string name="evening_3">Что мне нравится в себе сегодня</string>
+    <string name="evening_save">Сохранить день</string>
+    <string name="diary">Дневник гордости</string>
+    <string name="diary_empty">Здесь будут собираться твои вечера.</string>
+
+    <!-- SOS -->
+    <string name="sos_breathe">Подыши со мной</string>
+    <string name="sos_in">Вдох</string>
+    <string name="sos_hold">Пауза</string>
+    <string name="sos_out">Выдох</string>
+    <string name="sos_better">Мне уже немного лучше</string>
+    <string name="sos_help">Если ты можешь навредить себе, пожалуйста, прямо сейчас позвони 112 или на телефон доверия 8-800-2000-122.</string>
+
+    <!-- Translator -->
+    <string name="tr_intro">Напиши, что говорит твой внутренний критик. Я переведу это на добрый язык.</string>
+    <string name="tr_hint">Например: я всегда всё порчу</string>
+    <string name="tr_go">Перевести</string>
+    <string name="tr_traps">Какие ловушки мышления я вижу</string>
+    <string name="tr_kind">Добрая версия</string>
+    <string name="tr_none">Явной ловушки нет, просто тяжёлая мысль. Так тоже можно.</string>
+    <string name="tr_another">Сказать иначе</string>
+    <string name="tr_from">Переводчик</string>
+    <string name="tr_again">Перевести другую мысль</string>
+
+    <!-- Me -->
+    <string name="run_title">Дней подряд с победами</string>
+    <string name="run_text">Эта серия не сгорает. Пропустишь день — банка просто подождёт.</string>
+    <string name="run_best">Рекорд: %s</string>
+    <string name="run_today">Добавь победу сегодня, чтобы огонёк горел.</string>
+    <string name="stats">Статистика</string>
+    <string name="stat_wins">Побед</string>
+    <string name="stat_huge">Огромных побед</string>
+    <string name="stat_kind">Добрых слов</string>
+    <string name="stat_evenings">Вечеров</string>
+    <string name="stat_sos">Пережитых бурь</string>
+    <string name="stat_reframes">Переведённых мыслей</string>
+    <string name="report_card">Отчёт за неделю</string>
+    <string name="report_card_text">Отчёт о твоей крутости за эту неделю</string>
+    <string name="orders_n">Ордена · %1$d из %2$d</string>
+    <string name="voice">Кто тебя хвалит</string>
+    <string name="voice_sub">Пять голосов, один фан-клуб</string>
+    <string name="voice_pick">Выбрать</string>
+
+    <!-- Report -->
+    <string name="report_title">Отчёт о твоей крутости</string>
+    <string name="report_wins">побед за неделю</string>
+    <string name="report_more">На %d больше, чем на прошлой неделе</string>
+    <string name="report_less">Меньше, чем на прошлой неделе, и это нормально. Недели отдыха тоже считаются.</string>
+    <string name="report_same">Столько же, сколько на прошлой неделе. Стабильно!</string>
+    <string name="report_days">Дней с победами</string>
+    <string name="report_top">Самая сильная сторона</string>
+    <string name="report_busiest">Лучший день</string>
+    <string name="report_evenings">Вечеров</string>
+    <string name="report_huge">Огромные победы</string>
+    <string name="report_empty">Тихая неделя. Но ты её {прошёл|прошла}, и это важно.</string>
+    <string name="report_verdict">Вердикт</string>
+
+    <!-- Orders -->
+    <string name="order_new">Новый орден!</string>
+    <string name="order_more">и ещё %d</string>
+    <string name="order_next">Следующая степень: %1$d из %2$d</string>
+    <string name="order_maxed">Все три степени получены</string>
+    <string name="degree_1">III\u00A0степени</string>
+    <string name="degree_2">II\u00A0степени</string>
+    <string name="degree_3">I\u00A0степени</string>
+    <string name="order_title">%1$s %2$s</string>
+    <string name="certificate">Грамота</string>
+    <string name="cert_heading">Почётная грамота</string>
+    <string name="cert_certifies">Настоящим удостоверяется, что</string>
+    <string name="cert_bearer">{предъявитель|предъявительница} сего</string>
+    <string name="cert_awarded">получает</string>
+    <string name="cert_for">за: %s</string>
+    <string name="cert_sign">Glow, от имени всех, кто тебя любит</string>
+
+    <string name="order_wins">Орден Многих Побед</string>
+    <string name="order_tiny">Орден Маленьких Дел</string>
+    <string name="order_huge">Орден Великих Свершений</string>
+    <string name="order_run">Орден Ровного Света</string>
+    <string name="order_evening">Орден Вечерней Гордости</string>
+    <string name="order_kind">Орден Хранителя Добрых Слов</string>
+    <string name="order_sos">Орден Пережитых Бурь</string>
+    <string name="order_reframe">Орден Доброго Внутреннего Голоса</string>
+    <string name="order_early">Орден Ранней Пташки</string>
+    <string name="order_home">Орден Уютного Дома</string>
+    <string name="order_body">Орден Заботы о Теле</string>
+    <string name="order_work">Орден Трудовой Доблести</string>
+    <string name="order_mind">Орден Пытливого Ума</string>
+    <string name="order_people">Орден Тёплых Связей</string>
+    <string name="order_brave">Орден Тихой Отваги</string>
+    <string name="order_care">Орден Нежности к Себе</string>
+
+    <plurals name="req_wins"><item quantity="one">%d отмеченную победу</item><item quantity="few">%d отмеченные победы</item><item quantity="many">%d отмеченных побед</item><item quantity="other">%d отмеченной победы</item></plurals>
+    <plurals name="req_tiny"><item quantity="one">%d замеченную мелочь</item><item quantity="few">%d замеченные мелочи</item><item quantity="many">%d замеченных мелочей</item><item quantity="other">%d замеченной мелочи</item></plurals>
+    <plurals name="req_huge"><item quantity="one">%d огромную победу</item><item quantity="few">%d огромные победы</item><item quantity="many">%d огромных побед</item><item quantity="other">%d огромной победы</item></plurals>
+    <plurals name="req_run"><item quantity="one">%d день подряд с победами</item><item quantity="few">%d дня подряд с победами</item><item quantity="many">%d дней подряд с победами</item><item quantity="other">%d дня подряд с победами</item></plurals>
+    <plurals name="req_evening"><item quantity="one">%d вечер гордости</item><item quantity="few">%d вечера гордости</item><item quantity="many">%d вечеров гордости</item><item quantity="other">%d вечера гордости</item></plurals>
+    <plurals name="req_kind"><item quantity="one">%d сохранённое доброе слово</item><item quantity="few">%d сохранённых добрых слова</item><item quantity="many">%d сохранённых добрых слов</item><item quantity="other">%d сохранённого доброго слова</item></plurals>
+    <plurals name="req_sos"><item quantity="one">%d пережитую бурю</item><item quantity="few">%d пережитые бури</item><item quantity="many">%d пережитых бурь</item><item quantity="other">%d пережитой бури</item></plurals>
+    <plurals name="req_reframe"><item quantity="one">%d переведённую мысль</item><item quantity="few">%d переведённые мысли</item><item quantity="many">%d переведённых мыслей</item><item quantity="other">%d переведённой мысли</item></plurals>
+    <plurals name="req_early"><item quantity="one">%d победу до 9 утра</item><item quantity="few">%d победы до 9 утра</item><item quantity="many">%d побед до 9 утра</item><item quantity="other">%d победы до 9 утра</item></plurals>
+    <plurals name="req_category"><item quantity="one">%1$d победу: %2$s</item><item quantity="few">%1$d победы: %2$s</item><item quantity="many">%1$d побед: %2$s</item><item quantity="other">%1$d победы: %2$s</item></plurals>
+
+
+    <!-- Onboarding -->
+    <string name="ob_tagline">Карманный фанат, который замечает каждую твою победу</string>
+    <string name="ob_f1_title">Похвала за каждую победу</string>
+    <string name="ob_f1_text">Помыть посуду или получить работу — считается всё.</string>
+    <string name="ob_f2_title">Банка, которая наполняется</string>
+    <string name="ob_f2_text">Каждая победа падает в неё камешком. Встряхни её в трудный день.</string>
+    <string name="ob_f3_title">Помощь в тяжёлые моменты</string>
+    <string name="ob_f3_text">Кнопка SOS, переводчик с самокритичного и твои добрые слова.</string>
+    <string name="ob_f4_title">Бесплатно и приватно</string>
+    <string name="ob_f4_text">Без аккаунта, рекламы и интернета. Всё остаётся в телефоне.</string>
+    <string name="ob_begin">Начнём</string>
+    <string name="ob_name">Как тебя зовут?</string>
+    <string name="ob_name_hint">Имя</string>
+    <string name="ob_name_text">Чтобы похвала была именно про тебя.</string>
+    <string name="ob_gender">Как к тебе обращаться?</string>
+    <string name="ob_gender_text">Чтобы писать «ты сделал» или «ты сделала», без скобок.</string>
+    <string name="gender_male">В мужском роде</string>
+    <string name="gender_female">В женском роде</string>
+    <string name="ob_voice">Кто будет тебя хвалить?</string>
+    <string name="ob_voice_text">Голос можно сменить в любой момент.</string>
+    <string name="ob_times">Когда мне заглядывать?</string>
+    <string name="ob_times_text">Похвала утром и три хорошие вещи вечером. И то и другое можно выключить.</string>
+    <string name="ob_finish">Засиять</string>
+
+    <!-- Settings -->
+    <string name="perm_title">Разреши уведомления</string>
+    <string name="perm_text">Для утренней похвалы и вечернего напоминания.</string>
+    <string name="set_name">Имя</string>
+    <string name="set_gender">Обращаться ко мне</string>
+    <string name="set_notifications">Уведомления</string>
+    <string name="set_morning">Похвала дня</string>
+    <string name="set_morning_text">Каждое утро в %s</string>
+    <string name="set_evening">Вечер гордости</string>
+    <string name="set_evening_text">Три хорошие вещи в %s</string>
+    <string name="set_weekly">Отчёт за неделю</string>
+    <string name="set_weekly_text">В воскресенье вечером</string>
+    <string name="autostart_title">Уведомления опаздывают или не приходят?</string>
+    <string name="autostart_text">На Xiaomi, Huawei и некоторых других телефонах разреши Glow автозапуск и сними ограничения батареи.</string>
+    <string name="set_feel">Ощущения</string>
+    <string name="set_haptics">Вибрация</string>
+    <string name="set_haptics_text">Радостная вибрация, когда тебя хвалят</string>
+    <string name="set_appearance">Оформление</string>
+    <string name="theme_system">Как в системе</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="language">Язык</string>
+    <string name="lang_system">Как в системе</string>
+    <string name="backup">Резервная копия</string>
+    <string name="backup_text">Всё хранится только на этом телефоне. Сохрани копию в файл, чтобы не потерять данные или перенести их на новый телефон.</string>
+    <string name="backup_export">Экспорт</string>
+    <string name="backup_import">Импорт</string>
+    <string name="backup_import_title">Заменить все данные?</string>
+    <string name="backup_import_text">Всё в приложении будет заменено данными из копии.</string>
+    <string name="backup_done">Копия сохранена</string>
+    <string name="backup_restored">Копия восстановлена</string>
+    <string name="backup_failed">Что-то пошло не так</string>
+    <string name="about">О приложении</string>
+    <string name="about_text">Glow бесплатный: без рекламы, аккаунта и доступа в интернет. Сделано с заботой в Stillcraft.</string>
+    <string name="about_note">Glow — добрый спутник, а не терапия. Если тяжело уже долго, пожалуйста, поговори с близким человеком или специалистом.</string>
+    <string name="about_version">Версия %s</string>
+
+    <!-- Notifications and widget -->
+    <string name="channel_praise">Похвала</string>
+    <string name="channel_praise_desc">Утренняя похвала, вечер гордости и отчёт за неделю</string>
+    <string name="notif_evening_title">Три хорошие вещи?</string>
+    <string name="notif_evening_text">Перед сном назови три вещи, которыми гордишься сегодня.</string>
+    <string name="notif_weekly_title">Отчёт за неделю готов</string>
+    <string name="notif_weekly_text">За неделю: %s. Загляни, посмотри, как ты {был|была} хорош{|а}.</string>
+    <string name="widget_name">Похвала дня</string>
+    <string name="widget_desc">Доброе слово на главном экране</string>
+</resources>

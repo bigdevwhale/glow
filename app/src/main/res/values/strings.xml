@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Russian strings may hold "{male|female}" forms; the UI resolves them with the chosen gender. -->
+<resources>
+    <string name="app_name" translatable="false">Glow</string>
+
+    <!-- Tabs -->
+    <string name="tab_today">Today</string>
+    <string name="tab_jar">Jar</string>
+    <string name="tab_kind">Kind words</string>
+    <string name="tab_me">Me</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="close">Close</string>
+    <string name="nice">Nice!</string>
+    <string name="share">Share</string>
+    <string name="another">Another</string>
+    <string name="keep">Keep</string>
+    <string name="settings">Settings</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="previous_month">Previous month</string>
+    <string name="next_month">Next month</string>
+
+    <string name="greet_morning">Good morning</string>
+    <string name="greet_day">Good afternoon</string>
+    <string name="greet_evening">Good evening</string>
+    <string name="greet_night">Hello, night owl</string>
+
+    <plurals name="wins">
+        <item quantity="one">%d win</item>
+        <item quantity="other">%d wins</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+
+    <!-- Today -->
+    <string name="praise_of_day">Praise of the day</string>
+    <string name="saved_to_kind">Saved to kind words</string>
+    <string name="have_win">I’ve got a win!</string>
+    <string name="have_win_sub">Tiny or huge, tell me about it</string>
+    <string name="today_wins">Today’s wins</string>
+    <string name="today_empty">Nothing yet. Getting out of bed counts, by the way.</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="evening_title">Three things I’m proud of</string>
+    <string name="evening_cta">Close the day with three good things</string>
+    <string name="sos">I feel bad</string>
+    <string name="translator">Self-criticism translator</string>
+    <string name="translator_sub">Turn harsh thoughts into kind ones</string>
+    <string name="kind_random">A kind word</string>
+    <string name="kind_random_sub">Read something nice about you</string>
+
+    <!-- Add a win -->
+    <string name="add_title">What did you do?</string>
+    <string name="add_hint">Even the smallest thing counts</string>
+    <string name="add_size">How big did it feel?</string>
+    <string name="size_tiny">Tiny</string>
+    <string name="size_tiny_text">Small, but mine</string>
+    <string name="size_solid">Solid</string>
+    <string name="size_solid_text">Took real effort</string>
+    <string name="size_huge">Huge</string>
+    <string name="size_huge_text">A big deal!</string>
+    <string name="add_category">What kind of win?</string>
+    <string name="praise_me">Praise me!</string>
+    <string name="edit_win">Edit win</string>
+    <string name="delete_win">Delete this win?</string>
+    <string name="delete_win_text">It will disappear from the jar.</string>
+
+    <string name="cat_home">Home</string>
+    <string name="cat_body">Body</string>
+    <string name="cat_work">Work</string>
+    <string name="cat_mind">Mind</string>
+    <string name="cat_people">People</string>
+    <string name="cat_brave">Courage</string>
+    <string name="cat_care">Self-care</string>
+    <string name="cat_none">Other</string>
+
+    <!-- Praise reveal -->
+    <string name="win_tiny">A tiny win</string>
+    <string name="win_solid">A solid win</string>
+    <string name="win_huge">A HUGE win</string>
+    <string name="thanks">Thank you!</string>
+    <string name="another_win">Another win</string>
+
+    <!-- Jar -->
+    <string name="jar_title">Jar of wins</string>
+    <string name="jar_shake">Tilt or shake the phone. Tap a stone to remember.</string>
+    <string name="jar_empty">The jar is empty for now. Your first win drops right in.</string>
+    <string name="jar_list">This month’s wins</string>
+    <string name="jar_all">All</string>
+    <string name="jar_huge_n">Huge: %d</string>
+
+    <!-- Kind words -->
+    <string name="kind_title">Kind words</string>
+    <string name="kind_sub">Compliments worth keeping. Read them on hard days.</string>
+    <string name="kind_add">Add</string>
+    <string name="kind_shuffle">Shuffle</string>
+    <string name="kind_empty">Save the nice things people say: a message, a review, a note. They’re proof for the days you forget.</string>
+    <string name="kind_new">New kind words</string>
+    <string name="kind_edit">Edit kind words</string>
+    <string name="kind_text_hint">What did they say?</string>
+    <string name="kind_from_hint">Who said it? (optional)</string>
+    <string name="kind_photo">Add a screenshot</string>
+    <string name="kind_photo_remove">Remove screenshot</string>
+    <string name="kind_delete">Delete these kind words?</string>
+    <string name="kind_delete_text">They will be removed from your collection.</string>
+    <string name="kind_tap_next">Tap for the next one</string>
+    <string name="kind_from">— %s</string>
+
+    <!-- Evening -->
+    <string name="evening_intro">Before sleep, name three things. Big or small, done or simply survived.</string>
+    <string name="evening_1">Something I did</string>
+    <string name="evening_2">Something I handled</string>
+    <string name="evening_3">Something I like about myself today</string>
+    <string name="evening_save">Save the day</string>
+    <string name="diary">Pride diary</string>
+    <string name="diary_empty">Your evenings will collect here.</string>
+
+    <!-- SOS -->
+    <string name="sos_breathe">Breathe with me</string>
+    <string name="sos_in">Breathe in</string>
+    <string name="sos_hold">Hold</string>
+    <string name="sos_out">Breathe out</string>
+    <string name="sos_better">I feel a bit better</string>
+    <string name="sos_help">If you might hurt yourself, please call your local emergency number or a crisis line right now.</string>
+
+    <!-- Translator -->
+    <string name="tr_intro">Write down the harsh thing your inner critic says. I’ll translate it into kind.</string>
+    <string name="tr_hint">For example: I always mess everything up</string>
+    <string name="tr_go">Translate</string>
+    <string name="tr_traps">Thinking traps I noticed</string>
+    <string name="tr_kind">The kind version</string>
+    <string name="tr_none">No classic trap here, just a heavy thought. That’s allowed.</string>
+    <string name="tr_another">Another way to say it</string>
+    <string name="tr_from">The translator</string>
+    <string name="tr_again">Translate another thought</string>
+
+    <!-- Me -->
+    <string name="run_title">Days in a row with wins</string>
+    <string name="run_text">It never burns out. Miss a day and the jar simply waits for you.</string>
+    <string name="run_best">Best: %s</string>
+    <string name="run_today">Add a win today to keep it glowing.</string>
+    <string name="stats">Stats</string>
+    <string name="stat_wins">Wins</string>
+    <string name="stat_huge">Huge wins</string>
+    <string name="stat_kind">Kind words</string>
+    <string name="stat_evenings">Evenings</string>
+    <string name="stat_sos">Storms weathered</string>
+    <string name="stat_reframes">Thoughts translated</string>
+    <string name="report_card">Weekly report</string>
+    <string name="report_card_text">The report on how great you are this week</string>
+    <string name="orders_n">Orders · %1$d of %2$d</string>
+    <string name="voice">Who praises you</string>
+    <string name="voice_sub">Five voices, one fan club</string>
+    <string name="voice_pick">Choose</string>
+
+    <!-- Report -->
+    <string name="report_title">Report on how great you are</string>
+    <string name="report_wins">wins this week</string>
+    <string name="report_more">%d more than last week</string>
+    <string name="report_less">Fewer than last week, and that’s fine. Rest weeks count.</string>
+    <string name="report_same">As many as last week. Steady!</string>
+    <string name="report_days">Days with wins</string>
+    <string name="report_top">Strongest area</string>
+    <string name="report_busiest">Best day</string>
+    <string name="report_evenings">Evenings</string>
+    <string name="report_huge">Huge wins</string>
+    <string name="report_empty">A quiet week. Even then, you got through it, and that matters.</string>
+    <string name="report_verdict">Verdict</string>
+
+    <!-- Orders -->
+    <string name="order_new">A new order!</string>
+    <string name="order_more">and %d more</string>
+    <string name="order_next">Next degree: %1$d of %2$d</string>
+    <string name="order_maxed">All three degrees earned</string>
+    <string name="degree_1">3rd class</string>
+    <string name="degree_2">2nd class</string>
+    <string name="degree_3">1st class</string>
+    <string name="order_title">%1$s, %2$s</string>
+    <string name="certificate">Certificate</string>
+    <string name="cert_heading">Certificate of Honour</string>
+    <string name="cert_certifies">This certifies that</string>
+    <string name="cert_bearer">the bearer of this certificate</string>
+    <string name="cert_awarded">receives the</string>
+    <string name="cert_for">for: %s</string>
+    <string name="cert_sign">Glow, on behalf of everyone who loves you</string>
+
+    <string name="order_wins">Order of Many Wins</string>
+    <string name="order_tiny">Order of Small Things</string>
+    <string name="order_huge">Order of Great Deeds</string>
+    <string name="order_run">Order of Steady Light</string>
+    <string name="order_evening">Order of Evening Pride</string>
+    <string name="order_kind">Keeper of Kind Words</string>
+    <string name="order_sos">Order of Weathered Storms</string>
+    <string name="order_reframe">Order of the Kind Inner Voice</string>
+    <string name="order_early">Order of the Early Bird</string>
+    <string name="order_home">Order of the Cosy Home</string>
+    <string name="order_body">Order of the Cared-for Body</string>
+    <string name="order_work">Order of Labour Valour</string>
+    <string name="order_mind">Order of the Curious Mind</string>
+    <string name="order_people">Order of Warm Ties</string>
+    <string name="order_brave">Order of Quiet Courage</string>
+    <string name="order_care">Order of Self-Tenderness</string>
+
+    <plurals name="req_wins"><item quantity="one">%d win celebrated</item><item quantity="other">%d wins celebrated</item></plurals>
+    <plurals name="req_tiny"><item quantity="one">%d tiny win noticed</item><item quantity="other">%d tiny wins noticed</item></plurals>
+    <plurals name="req_huge"><item quantity="one">%d huge win</item><item quantity="other">%d huge wins</item></plurals>
+    <plurals name="req_run"><item quantity="one">%d day in a row with wins</item><item quantity="other">%d days in a row with wins</item></plurals>
+    <plurals name="req_evening"><item quantity="one">%d evening of pride</item><item quantity="other">%d evenings of pride</item></plurals>
+    <plurals name="req_kind"><item quantity="one">%d kind word kept</item><item quantity="other">%d kind words kept</item></plurals>
+    <plurals name="req_sos"><item quantity="one">%d storm weathered</item><item quantity="other">%d storms weathered</item></plurals>
+    <plurals name="req_reframe"><item quantity="one">%d harsh thought translated</item><item quantity="other">%d harsh thoughts translated</item></plurals>
+    <plurals name="req_early"><item quantity="one">%d win before 9 am</item><item quantity="other">%d wins before 9 am</item></plurals>
+    <plurals name="req_category"><item quantity="one">%1$d win: %2$s</item><item quantity="other">%1$d wins: %2$s</item></plurals>
+
+
+    <!-- Onboarding -->
+    <string name="ob_tagline">A pocket fan who notices every win</string>
+    <string name="ob_f1_title">Praise for every win</string>
+    <string name="ob_f1_text">Washed the dishes or got the job, it all counts.</string>
+    <string name="ob_f2_title">A jar that fills up</string>
+    <string name="ob_f2_text">Each win drops in as a stone. Shake it on a hard day.</string>
+    <string name="ob_f3_title">Help for hard moments</string>
+    <string name="ob_f3_text">An SOS button, a self-criticism translator and your kind words.</string>
+    <string name="ob_f4_title">Free and private</string>
+    <string name="ob_f4_text">No account, no ads, no internet. Everything stays on the phone.</string>
+    <string name="ob_begin">Let’s begin</string>
+    <string name="ob_name">What should I call you?</string>
+    <string name="ob_name_hint">Your name</string>
+    <string name="ob_name_text">So the praise is really about you.</string>
+    <string name="ob_gender">How should I address you?</string>
+    <string name="ob_gender_text">So Russian text says «ты сделал» or «ты сделала».</string>
+    <string name="gender_male">He / him</string>
+    <string name="gender_female">She / her</string>
+    <string name="ob_voice">Who will praise you?</string>
+    <string name="ob_voice_text">You can change the voice anytime.</string>
+    <string name="ob_times">When shall I come by?</string>
+    <string name="ob_times_text">A praise in the morning and three good things in the evening. Both can be turned off.</string>
+    <string name="ob_finish">Let’s glow</string>
+
+    <!-- Settings -->
+    <string name="perm_title">Allow notifications</string>
+    <string name="perm_text">For the morning praise and the evening reminder.</string>
+    <string name="set_name">Name</string>
+    <string name="set_gender">Address me as</string>
+    <string name="set_notifications">Notifications</string>
+    <string name="set_morning">Praise of the day</string>
+    <string name="set_morning_text">Every morning at %s</string>
+    <string name="set_evening">Evening of pride</string>
+    <string name="set_evening_text">Three good things at %s</string>
+    <string name="set_weekly">Weekly report</string>
+    <string name="set_weekly_text">Sunday evening</string>
+    <string name="autostart_title">Notifications late or missing?</string>
+    <string name="autostart_text">On Xiaomi, Huawei and some other phones, allow Autostart and remove battery limits for Glow.</string>
+    <string name="set_feel">Feel</string>
+    <string name="set_haptics">Vibration</string>
+    <string name="set_haptics_text">A happy buzz when you’re praised</string>
+    <string name="set_appearance">Appearance</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="language">Language</string>
+    <string name="lang_system">System</string>
+    <string name="backup">Backup</string>
+    <string name="backup_text">Everything is stored only on this phone. Export a backup file to keep it safe or move to a new phone.</string>
+    <string name="backup_export">Export</string>
+    <string name="backup_import">Import</string>
+    <string name="backup_import_title">Replace all data?</string>
+    <string name="backup_import_text">Everything in the app will be replaced with the backup.</string>
+    <string name="backup_done">Backup saved</string>
+    <string name="backup_restored">Backup restored</string>
+    <string name="backup_failed">Something went wrong</string>
+    <string name="about">About</string>
+    <string name="about_text">Glow is free, with no ads, no account and no internet access. Made with care by Stillcraft.</string>
+    <string name="about_note">Glow is a kind companion, not therapy. If things feel heavy for a long time, please talk to someone you trust or a professional.</string>
+    <string name="about_version">Version %s</string>
+
+    <!-- Notifications and widget -->
+    <string name="channel_praise">Praise</string>
+    <string name="channel_praise_desc">The morning praise, the evening of pride and the weekly report</string>
+    <string name="notif_evening_title">Three good things?</string>
+    <string name="notif_evening_text">Before sleep, name three things you’re proud of today.</string>
+    <string name="notif_weekly_title">Your weekly report is ready</string>
+    <string name="notif_weekly_text">%s this week. Come and see how great you were.</string>
+    <string name="widget_name">Praise of the day</string>
+    <string name="widget_desc">A kind word on your home screen</string>
+</resources>

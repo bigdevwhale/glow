@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A glowing orb with soft rays and a small sparkle, inside the 66 dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#33FFFFFF"
+        android:pathData="M54,30a24,24 0,1 1,0 48a24,24 0,1 1,0 -48" />
+    <path
+        android:strokeColor="#CCFFE3A6"
+        android:strokeLineCap="round"
+        android:strokeWidth="3"
+        android:pathData="M54,28v-4M54,84v-4M28,54h-4M84,54h-4M35.6,35.6l-2.8,-2.8M75.2,75.2l-2.8,-2.8M35.6,72.4l-2.8,2.8M75.2,32.8l-2.8,2.8" />
+    <path
+        android:fillColor="#FFFFD27A"
+        android:pathData="M54,38a16,16 0,1 1,0 32a16,16 0,1 1,0 -32" />
+    <path
+        android:fillColor="#FFFFF4DC"
+        android:pathData="M50,43a7,7 0,1 1,0 14a7,7 0,1 1,0 -14" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M72,34C72.6,37.4 73.6,38.4 77,39C73.6,39.6 72.6,40.6 72,44C71.4,40.6 70.4,39.6 67,39C70.4,38.4 71.4,37.4 72,34Z" />
+</vector>
