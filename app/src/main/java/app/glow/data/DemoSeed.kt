@@ -46,7 +46,8 @@ object DemoSeed {
         val ru = Locale.getDefault().language == "ru"
         val content = Content.of(Locale.getDefault())
         val name = if (ru) "Аня" else "Anna"
-        val voice = Voice.FRIEND
+        // Russian screenshots show off the granny; English ones the warm friend.
+        val voice = if (ru) Voice.GRANNY else Voice.FRIEND
         val zone = ZoneId.systemDefault()
         val today = LocalDate.now(zone)
         val now = System.currentTimeMillis()

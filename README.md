@@ -4,7 +4,7 @@
 
 # Glow
 
-### A pocket fan who notices every win
+### Every win deserves a little praise
 
 *Write down what you did, from washing the dishes to landing the job, and get praised for it. A jar that fills with your wins, five voices to cheer you on, an SOS for hard moments and a translator for your inner critic. Free, no ads, no account, works offline.*
 
