@@ -291,4 +291,15 @@
     <string name="notif_weekly_text">%s this week. Come and see how great you were.</string>
     <string name="widget_name">Praise of the day</string>
     <string name="widget_desc">A kind word on your home screen</string>
+    <!-- Community: the StillCraft bot on Telegram -->
+    <string name="community_title">Community</string>
+    <string name="community_sub">The app is made together with the people who use it. It all goes through the StillCraft bot on Telegram.</string>
+    <string name="community_bug">Report a bug</string>
+    <string name="community_bug_sub">what broke and how to repeat it</string>
+    <string name="community_idea">Suggest an idea</string>
+    <string name="community_idea_sub">a feature, a praise, a jar</string>
+    <string name="community_follow">Follow updates</string>
+    <string name="community_follow_sub">the bot writes when a version is out</string>
+    <string name="community_chat">StillCraft chat</string>
+    <string name="community_chat_sub">all the apps and people</string>
 </resources>

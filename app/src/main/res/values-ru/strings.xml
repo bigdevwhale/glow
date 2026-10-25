@@ -293,4 +293,15 @@
     <string name="notif_weekly_text">За неделю: %s. Загляни, посмотри, как ты {был|была} хорош{|а}.</string>
     <string name="widget_name">Похвала дня</string>
     <string name="widget_desc">Доброе слово на главном экране</string>
+    <!-- Community: the StillCraft bot on Telegram -->
+    <string name="community_title">Сообщество</string>
+    <string name="community_sub">Приложение делается вместе с теми, кто им пользуется. Всё идёт через бота StillCraft в Telegram.</string>
+    <string name="community_bug">Сообщить о баге</string>
+    <string name="community_bug_sub">что сломалось и как повторить</string>
+    <string name="community_idea">Предложить идею</string>
+    <string name="community_idea_sub">функция, похвала, банка</string>
+    <string name="community_follow">Подписаться на обновления</string>
+    <string name="community_follow_sub">бот напишет, когда выйдет версия</string>
+    <string name="community_chat">Чат StillCraft</string>
+    <string name="community_chat_sub">все приложения и люди</string>
 </resources>

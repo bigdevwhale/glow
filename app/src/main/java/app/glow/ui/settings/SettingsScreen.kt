@@ -54,6 +54,7 @@ import app.glow.ui.Language
 import app.glow.ui.clockTime
 import app.glow.ui.locale
 import app.glow.ui.components.Chip
+import app.glow.ui.components.CommunityLinks
 import app.glow.ui.components.ConfirmDialog
 import app.glow.ui.components.SectionTitle
 import app.glow.ui.components.TimeDialog
@@ -182,6 +183,8 @@ fun SettingsScreen(settings: Settings, onBack: () -> Unit) {
                     }
                 }
             }
+
+            CommunityLinks()
 
             SectionTitle(stringResource(R.string.about))
             UCard {
