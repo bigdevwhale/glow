@@ -8,6 +8,15 @@ then close it like any HTML comment. The release notes carry it, and the chat bo
 
 All notable changes to Glow. Versions follow [semantic versioning](https://semver.org/).
 
+## [1.0.2] - 2026-11-07
+
+### Fixed
+- Russian: Granny said "какой ты у меня особенная" — "какой" now follows the reader's gender in four of her lines (#1, #2), and the butler's "замечательная человек" became "человек весьма замечательный" (#3).
+
+<!-- tg
+Исправлено: бабушка больше не путается в роде — «какая ты у меня особенная». И дворецкий теперь говорит «человек весьма замечательный».
+-->
+
 ## [1.0.1] - 2026-10-25
 
 ### Added
