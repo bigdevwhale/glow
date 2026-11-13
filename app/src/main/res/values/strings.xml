@@ -80,6 +80,7 @@
     <string name="cat_people">People</string>
     <string name="cat_brave">Courage</string>
     <string name="cat_care">Self-care</string>
+    <string name="cat_hobby">Hobby</string>
     <string name="cat_none">Other</string>
 
     <!-- Praise reveal -->

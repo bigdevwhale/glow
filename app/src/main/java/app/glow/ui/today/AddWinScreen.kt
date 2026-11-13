@@ -229,7 +229,7 @@ private fun SizeOption(s: WinSize, selected: Boolean, modifier: Modifier, onClic
     ) {
         Box(Modifier.height(44.dp), contentAlignment = Alignment.Center) {
             val d = when (s) { WinSize.TINY -> 18.dp; WinSize.SOLID -> 28.dp; WinSize.HUGE -> 42.dp }
-            Box(Modifier.size(d).clip(CircleShape).background(Brush.radialGradient(listOf(Color.White.copy(alpha = 0.6f), color))))
+            app.glow.ui.components.MarbleDot(when (s) { WinSize.TINY -> 6; WinSize.SOLID -> 0; WinSize.HUGE -> 3 }, d)
         }
         Spacer(Modifier.height(6.dp))
         Text(sizeLabel(s), style = UType.Strong.copy(color = if (selected) color else U.c.ink))

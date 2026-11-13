@@ -31,6 +31,7 @@ fun categoryPic(c: Category?): Int = when (c) {
     Category.PEOPLE -> R.drawable.cat_people
     Category.BRAVE -> R.drawable.cat_brave
     Category.CARE -> R.drawable.cat_care
+    Category.HOBBY -> R.drawable.cat_hobby
     null -> R.drawable.cat_none
 }
 

@@ -51,6 +51,10 @@ Icons, left to right, top to bottom:
 7) Self-care: a bath with bubbles and a candle, or a hug-shaped blanket
 8) Other: a bright sparkle star""",
 
+    "hobby": HEAD + f"""Image: one small icon for the kind of win "Hobby" in a gentle self-praise app: a little artist's palette with a paintbrush, a ball of yarn with knitting needles and a guitar pick, grouped as one cosy object, no frame, no circle behind it, centred with clear margin.
+{STYLE}
+Square image, {BG}.""",
+
     "orders": HEAD + f"""Image: sixteen award medals (orders) for a gentle self-praise app, each a round golden medallion with an engraved picture, hanging from a short silk ribbon.
 {STYLE}
 Layout: 4 columns x 4 rows of equal square cells {BG}. One medal per cell, centred, all medals the same size and shape, clear margin. Each medal has its own ribbon colour and its own picture in the middle:

@@ -23,7 +23,7 @@ enum class WinSize(val value: Int) {
 }
 
 enum class Category(val id: String) {
-    HOME("home"), BODY("body"), WORK("work"), MIND("mind"), PEOPLE("people"), BRAVE("brave"), CARE("care");
+    HOME("home"), BODY("body"), WORK("work"), MIND("mind"), PEOPLE("people"), BRAVE("brave"), CARE("care"), HOBBY("hobby");
 
     companion object {
         fun of(id: String): Category? = entries.firstOrNull { it.id == id }

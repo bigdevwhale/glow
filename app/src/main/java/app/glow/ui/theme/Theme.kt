@@ -107,6 +107,7 @@ val CategoryColors = listOf(
     Color(0xFFEE6A2C), // people
     Color(0xFFD9406E), // brave
     Color(0xFF2FA5A0), // care
+    Color(0xFF8E3F86), // hobby
     Color(0xFFE8A0B8), // none
 )
 
@@ -119,7 +120,7 @@ val MarblePalette = listOf(
 )
 
 /** The palette index each category starts with, close to its old colour. */
-val DefaultCatColors = listOf(3, 6, 9, 11, 2, 0, 7, 12)
+val DefaultCatColors = listOf(3, 6, 9, 11, 2, 0, 7, 13, 12)
 
 val LocalPalette = staticCompositionLocalOf { LightPalette }
 

@@ -561,5 +561,6 @@ val ContentEn = Content(
         "people" to listOf("Called mum", "Texted a friend", "Helped someone", "Said thank you", "Made someone laugh"),
         "brave" to listOf("Spoke up", "Set a boundary", "Tried something new", "Made an appointment", "Admitted a mistake"),
         "care" to listOf("Took a break", "Had a bath", "Didn't overwork", "Forgave myself", "Did something just for fun"),
+        "hobby" to listOf("Drew something", "Knitted a few rows", "Played the guitar", "Finished a craft", "Went back to an old hobby"),
     ),
 )

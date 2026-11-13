@@ -82,6 +82,7 @@
     <string name="cat_people">Люди</string>
     <string name="cat_brave">Смелость</string>
     <string name="cat_care">Забота о себе</string>
+    <string name="cat_hobby">Хобби</string>
     <string name="cat_none">Другое</string>
 
     <!-- Praise reveal -->

@@ -13,6 +13,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.Bedtime
 import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.rounded.Palette
 import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.material.icons.rounded.FavoriteBorder
 import androidx.compose.material.icons.rounded.Home
@@ -137,6 +138,7 @@ fun categoryLabel(c: Category?): String = stringResource(
         Category.PEOPLE -> R.string.cat_people
         Category.BRAVE -> R.string.cat_brave
         Category.CARE -> R.string.cat_care
+        Category.HOBBY -> R.string.cat_hobby
         null -> R.string.cat_none
     }
 )
@@ -149,6 +151,7 @@ fun categoryIcon(c: Category?): ImageVector = when (c) {
     Category.PEOPLE -> Icons.Rounded.Groups
     Category.BRAVE -> Icons.Rounded.Bolt
     Category.CARE -> Icons.Rounded.Spa
+    Category.HOBBY -> Icons.Rounded.Palette
     null -> Icons.Rounded.AutoAwesome
 }
 

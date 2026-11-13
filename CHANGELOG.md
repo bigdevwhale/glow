@@ -8,6 +8,18 @@ then close it like any HTML comment. The release notes carry it, and the chat bo
 
 All notable changes to Glow. Versions follow [semantic versioning](https://semver.org/).
 
+## [1.2.0] - 2026-11-13
+
+### Added
+- A new kind of win: Hobby, with its own picture, marble colour and ideas («drew something», «knitted a few rows») (#5).
+
+### Changed
+- The size choice when adding a win shows glass marbles too.
+
+<!-- tg
+Новое: категория «Хобби» – со своей картинкой, цветом шарика и подсказками.
+-->
+
 ## [1.1.0] - 2026-11-13
 
 ### Added

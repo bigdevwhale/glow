@@ -56,9 +56,12 @@ def key(im, glass=False):
     bg = None if glass else outside(im, lo)
     for y in range(h):
         for x in range(w):
-            if bg is not None and not bg[y * w + x]:
-                continue
             r, g, b, a = px[x, y]
+            if bg is not None and not bg[y * w + x]:
+                # Enclosed holes (a palette's thumb hole, inside a ball of yarn): only the flat magenta goes.
+                if r > 215 and b > 215 and g < 70:
+                    px[x, y] = (0, 0, 0, 0)
+                continue
             m = min(r, b) - g  # how magenta
             if m > hi:
                 px[x, y] = (0, 0, 0, 0)
@@ -140,6 +143,11 @@ def main():
         save(fr, f"order_{n}")
     for n, fr in enumerate(marbles(SHEETS / "marbles.png", 4, 4, 128)):
         save(fr, f"marble_{n}")
+    if (SHEETS / "hobby.png").exists():
+        h = key(Image.open(SHEETS / "hobby.png"))
+        h = h.crop(h.getchannel("A").point(lambda v: 255 if v > 30 else 0).getbbox())
+        h.thumbnail((192, 192), Image.LANCZOS)
+        save(h, "cat_hobby")
     jar = key(Image.open(SHEETS / "jar.png"), glass=True)
     jar = jar.crop(jar.getchannel("A").point(lambda v: 255 if v > 30 else 0).getbbox())
     jar.thumbnail((720, 720), Image.LANCZOS)
