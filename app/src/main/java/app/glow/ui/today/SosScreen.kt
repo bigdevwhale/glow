@@ -1,5 +1,6 @@
 package app.glow.ui.today
 
+import app.glow.ui.components.VoiceFace
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -119,7 +120,7 @@ fun SosScreen(data: GlowData, onClose: () -> Unit) {
             }
             Spacer(Modifier.weight(0.6f))
             if (breathing) Breather() else {
-                GlowOrb(Modifier.size(200.dp), strength = 0.5f, color = Pink, warm = Honey) { Text(s.voice.emoji, fontSize = 40.sp) }
+                GlowOrb(Modifier.size(200.dp), strength = 0.5f, color = Pink, warm = Honey) { VoiceFace(s.voice, 110.dp) }
                 Spacer(Modifier.height(28.dp))
                 AnimatedContent(index, transitionSpec = { fadeIn(tween(900)) togetherWith fadeOut(tween(600)) }, label = "sos") { i ->
                     Text(

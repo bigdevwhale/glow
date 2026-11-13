@@ -1,5 +1,6 @@
 package app.glow.ui.me
 
+import app.glow.ui.components.VoiceFace
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -77,8 +78,8 @@ fun VoiceList(selected: Voice, seed: Long, onPick: (Voice) -> Unit) {
                 .padding(14.dp),
             verticalAlignment = Alignment.Top,
         ) {
-            Box(Modifier.size(48.dp).clip(CircleShape).background(if (on) U.c.surface else U.c.surface2), contentAlignment = Alignment.Center) {
-                Text(v.emoji, fontSize = 24.sp)
+            Box(Modifier.size(64.dp).clip(CircleShape).background(if (on) U.c.surface else U.c.surface2), contentAlignment = Alignment.Center) {
+                VoiceFace(v, 62.dp)
             }
             Spacer(Modifier.width(12.dp))
             Column(Modifier.weight(1f)) {

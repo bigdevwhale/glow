@@ -1,5 +1,6 @@
 package app.glow.ui.me
 
+import app.glow.ui.components.OrderMedal
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
@@ -87,9 +88,7 @@ fun CertificateScreen(award: Award, data: GlowData, onBack: () -> Unit) {
                     Text("✦", color = Gilt, fontSize = 14.sp)
                 }
                 Spacer(Modifier.height(18.dp))
-                Medal(award.degree, orderColor(award.order), size = 120.dp) {
-                    Icon(orderIcon(award.order), null, Modifier.size(32.dp), tint = Color.White)
-                }
+                OrderMedal(award.order, award.degree, 140.dp)
                 Spacer(Modifier.height(14.dp))
                 Text(stringResource(R.string.cert_certifies), style = UType.Body.copy(color = PaperMuted, fontFamily = Lora, fontStyle = FontStyle.Italic, textAlign = TextAlign.Center))
                 Spacer(Modifier.height(6.dp))

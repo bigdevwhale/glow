@@ -1,5 +1,6 @@
 package app.glow.ui.today
 
+import app.glow.ui.components.VoiceFace
 import android.widget.Toast
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
@@ -88,7 +89,7 @@ fun PraiseScreen(id: Long, data: GlowData, go: Go) {
             Spacer(Modifier.height(24.dp))
             val orb = when (size) { WinSize.TINY -> 170.dp; WinSize.SOLID -> 210.dp; WinSize.HUGE -> 250.dp }
             GlowOrb(Modifier.size(orb).scale(0.4f + 0.6f * pop.value), strength = size.value / 3f) {
-                Text(voice.emoji, fontSize = (34 + 8 * size.value).sp)
+                VoiceFace(voice, (70 + 18 * size.value).dp)
             }
             Spacer(Modifier.height(8.dp))
             Text(

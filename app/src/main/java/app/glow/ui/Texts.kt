@@ -1,5 +1,7 @@
 package app.glow.ui
 
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.getValue
 import android.content.Context
 import android.os.Build
 import android.os.VibrationEffect
@@ -150,7 +152,13 @@ fun categoryIcon(c: Category?): ImageVector = when (c) {
     null -> Icons.Rounded.AutoAwesome
 }
 
-fun categoryColor(c: Category?): Color = CategoryColors[c?.ordinal ?: CategoryColors.lastIndex]
+/** The user's marble colours, set from the settings at the root (#6). */
+object CatHues { var chosen: Map<String, Int> by androidx.compose.runtime.mutableStateOf(emptyMap()) }
+
+/** A category's palette index: the user's pick, or its default. */
+fun categoryHue(c: Category?): Int = CatHues.chosen[c?.id ?: "none"] ?: app.glow.ui.theme.DefaultCatColors[c?.ordinal ?: Category.entries.size]
+
+fun categoryColor(c: Category?): Color = app.glow.ui.theme.MarblePalette[categoryHue(c)]
 
 @Composable
 fun sizeLabel(s: WinSize): String = stringResource(

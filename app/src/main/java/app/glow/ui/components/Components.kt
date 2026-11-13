@@ -336,9 +336,7 @@ fun CelebrateDialog(award: app.glow.domain.Award, eyebrow: String, title: String
                 Modifier.fillMaxWidth().clip(U.RLg).background(U.c.bg).padding(24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Medal(award.degree, color, size = 110.dp) {
-                    Icon(app.glow.ui.orderIcon(award.order), null, Modifier.size(30.dp), tint = Color.White)
-                }
+                OrderMedal(award.order, award.degree, 130.dp)
                 Spacer(Modifier.height(14.dp))
                 Text(eyebrow.uppercase(), style = UType.Eyebrow.copy(color = U.c.accent))
                 Spacer(Modifier.height(6.dp))
@@ -407,6 +405,22 @@ fun ScalePicker(value: Int, onChange: (Int) -> Unit, labels: (Int) -> String, mo
             ) {
                 Text(labels(v), fontSize = 22.sp)
             }
+        }
+    }
+}
+
+/** A marble of palette colour [hue]: the painted glass marble when there is one, else a shaded ball of that colour. */
+@androidx.compose.runtime.Composable
+fun MarbleDot(hue: Int, size: androidx.compose.ui.unit.Dp) {
+    val ctx = androidx.compose.ui.platform.LocalContext.current
+    val res = androidx.compose.runtime.remember(hue) { ctx.resources.getIdentifier("marble_$hue", "drawable", ctx.packageName) }
+    if (res != 0) {
+        androidx.compose.foundation.Image(androidx.compose.ui.res.painterResource(res), null, androidx.compose.ui.Modifier.size(size))
+    } else {
+        val c = app.glow.ui.theme.MarblePalette[hue]
+        androidx.compose.foundation.Canvas(androidx.compose.ui.Modifier.size(size)) {
+            drawCircle(androidx.compose.ui.graphics.Brush.radialGradient(listOf(androidx.compose.ui.graphics.Color.White.copy(alpha = .7f), c, c.copy(red = c.red * .7f, green = c.green * .7f, blue = c.blue * .7f)),
+                center = center.copy(x = center.x - this.size.minDimension * .18f, y = center.y - this.size.minDimension * .18f), radius = this.size.minDimension * .7f))
         }
     }
 }

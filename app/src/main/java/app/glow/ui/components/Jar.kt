@@ -1,5 +1,9 @@
 package app.glow.ui.components
 
+import androidx.compose.ui.graphics.FilterQuality
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.graphics.ImageBitmap
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -34,7 +38,7 @@ import kotlin.math.sqrt
 import kotlin.random.Random
 
 /** One win as a stone: [size] 1..3 sets how big it is. */
-data class JarStone(val id: Long, val size: Int, val color: Color)
+data class JarStone(val id: Long, val size: Int, val color: Color, val hue: Int = -1)
 
 /**
  * A glass jar that fills with a stone per win. Stones drop in one by one, roll under gravity
@@ -70,10 +74,14 @@ fun Jar(stones: List<JarStone>, modifier: Modifier = Modifier, live: Boolean = t
         }
     }
 
-    val glass = U.c.ink
-    val lid = U.c.gold
     val glow = U.c.accent
     val fill = U.c.surface
+    // The painted glass jar and marbles (tools/gen_art.py); the physics keeps its own outline underneath.
+    val res = context.resources
+    val jarPic = remember { ImageBitmap.imageResource(res, app.glow.R.drawable.jar_glass) }
+    val marblePics = remember {
+        List(16) { i -> res.getIdentifier("marble_$i", "drawable", context.packageName).takeIf { it != 0 }?.let { ImageBitmap.imageResource(res, it) } }
+    }
     Canvas(
         modifier
             .onSizeChanged { sim.layout(it) }
@@ -82,7 +90,6 @@ fun Jar(stones: List<JarStone>, modifier: Modifier = Modifier, live: Boolean = t
         frame.let { } // redraw every frame
         val g = sim.geometry ?: return@Canvas
         val body = g.jarPath()
-        drawPath(body, fill.copy(alpha = 0.55f))
         val fullness = (sim.count.toFloat() / 40f).coerceIn(0f, 1f)
         if (sim.count > 0) {
             drawCircle(
@@ -93,16 +100,25 @@ fun Jar(stones: List<JarStone>, modifier: Modifier = Modifier, live: Boolean = t
         for (i in 0 until sim.count) {
             val p = Offset(sim.x[i], sim.y[i])
             val r = sim.r[i]
-            val c = sim.colors[i]
+            val pic = sim.hues[i].takeIf { it in marblePics.indices }?.let { marblePics[it] }
             drawCircle(Color.Black.copy(alpha = 0.10f), r, p + Offset(0f, r * 0.12f))
-            drawCircle(Brush.radialGradient(listOf(Color.White.copy(alpha = 0.55f).compositeOver(c), c, c.darker()), p - Offset(r * 0.35f, r * 0.4f), r * 1.5f), r, p)
-            drawCircle(Color.White.copy(alpha = 0.5f), r * 0.18f, p - Offset(r * 0.38f, r * 0.42f))
+            if (pic != null) {
+                val d = (r * 2).toInt().coerceAtLeast(1)
+                drawImage(pic, dstOffset = IntOffset((p.x - r).toInt(), (p.y - r).toInt()), dstSize = IntSize(d, d), filterQuality = FilterQuality.Medium)
+            } else {
+                val c = sim.colors[i]
+                drawCircle(Brush.radialGradient(listOf(Color.White.copy(alpha = 0.55f).compositeOver(c), c, c.darker()), p - Offset(r * 0.35f, r * 0.4f), r * 1.5f), r, p)
+                drawCircle(Color.White.copy(alpha = 0.5f), r * 0.18f, p - Offset(r * 0.38f, r * 0.42f))
+            }
         }
-        // Glass outline and a highlight down the left side.
-        drawPath(body, glass.copy(alpha = 0.22f), style = Stroke(g.w * 0.012f))
-        drawLine(Color.White.copy(alpha = 0.55f), Offset(g.left + g.w * 0.06f, g.shoulder + g.h * 0.08f), Offset(g.left + g.w * 0.06f, g.bottom - g.h * 0.18f), g.w * 0.02f, StrokeCap.Round)
-        drawRoundRect(lid, Offset(g.neckLeft - g.w * 0.03f, g.top - g.h * 0.055f), Size(g.neckRight - g.neckLeft + g.w * 0.06f, g.h * 0.07f), CornerRadius(g.w * 0.03f))
-        drawRoundRect(Color.White.copy(alpha = 0.3f), Offset(g.neckLeft, g.top - g.h * 0.045f), Size(g.neckRight - g.neckLeft, g.h * 0.015f), CornerRadius(g.w * 0.01f))
+        // The painted jar over the marbles: its glass is see-through, its cork and twine sit on top.
+        val jl = (g.left - g.w * 0.06f).toInt()
+        val jt = (g.top - g.h * 0.075f).toInt()
+        drawImage(
+            jarPic, dstOffset = IntOffset(jl, jt),
+            dstSize = IntSize((g.right + g.w * 0.06f).toInt() - jl, (g.bottom + g.h * 0.015f).toInt() - jt),
+            alpha = 0.92f, filterQuality = FilterQuality.Medium,
+        )
     }
 }
 
@@ -147,6 +163,7 @@ private class JarSim(private val stones: List<JarStone>) {
     private val py = FloatArray(stones.size)
     val r = FloatArray(stones.size)
     val colors = stones.map { it.color }
+    val hues = stones.map { it.hue }
     var count = 0
         private set
     var geometry: Geometry? = null

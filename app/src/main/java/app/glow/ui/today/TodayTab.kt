@@ -1,5 +1,7 @@
 package app.glow.ui.today
 
+import app.glow.ui.components.CategoryPic
+import app.glow.ui.components.VoiceFace
 import android.widget.Toast
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
@@ -171,7 +173,7 @@ private fun PraiseCard(data: GlowData) {
         GlowOrb(Modifier.size(170.dp).align(Alignment.TopEnd).offset(x = 70.dp, y = (-70).dp), strength = 0.3f)
         Column(Modifier.padding(20.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(s.voice.emoji, fontSize = 20.sp)
+                VoiceFace(s.voice, 40.dp)
                 Spacer(Modifier.width(8.dp))
                 Column {
                     Text(stringResource(R.string.praise_of_day).uppercase(), style = UType.Eyebrow.copy(color = U.c.accent))
@@ -258,8 +260,8 @@ fun WinRow(w: Win, showTime: Boolean = true, trailing: String? = null, onClick: 
     Row(Modifier.fillMaxWidth().clickable(onClick = onClick).padding(vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
         val d = when (WinSize.of(w.size)) { WinSize.TINY -> 30.dp; WinSize.SOLID -> 36.dp; WinSize.HUGE -> 42.dp }
         Box(Modifier.width(44.dp), contentAlignment = Alignment.Center) {
-            Box(Modifier.size(d).clip(CircleShape).background(Brush.radialGradient(listOf(color.copy(alpha = 0.55f), color))), contentAlignment = Alignment.Center) {
-                Icon(categoryIcon(cat), null, Modifier.size(d * 0.5f), tint = Color.White)
+            Box(Modifier.size(d).clip(CircleShape).background(Brush.radialGradient(listOf(color.copy(alpha = 0.12f), color.copy(alpha = 0.32f)))), contentAlignment = Alignment.Center) {
+                CategoryPic(cat, d * 0.78f)
             }
         }
         Spacer(Modifier.width(12.dp))

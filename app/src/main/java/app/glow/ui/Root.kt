@@ -131,6 +131,7 @@ class Go(private val nav: NavHostController) {
 
 @Composable
 fun GlowRoot(openRoute: MutableStateFlow<String?>, settings: Settings) {
+    CatHues.chosen = settings.catColors
     val context = LocalContext.current
     val container = context.container
     val nav = rememberNavController()

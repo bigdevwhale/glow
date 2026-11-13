@@ -1,5 +1,6 @@
 package app.glow.ui.jar
 
+import app.glow.ui.categoryHue
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -102,11 +103,11 @@ fun JarTab(data: GlowData, go: Go) {
                 }
             }
             Spacer(Modifier.height(8.dp))
-            val stones = remember(wins) { wins.map { JarStone(it.id, it.size, categoryColor(Category.of(it.category))) } }
+            val stones = remember(wins) { wins.map { JarStone(it.id, it.size, categoryColor(Category.of(it.category)), categoryHue(Category.of(it.category))) } }
             Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                 Jar(
                     stones,
-                    Modifier.fillMaxWidth(0.82f).aspectRatio(0.78f),
+                    Modifier.fillMaxWidth(0.78f).aspectRatio(0.66f),
                     live = resumed,
                     onTap = { id -> open = wins.firstOrNull { it.id == id } },
                 )

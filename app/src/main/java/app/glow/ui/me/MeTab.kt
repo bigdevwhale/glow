@@ -1,5 +1,7 @@
 package app.glow.ui.me
 
+import app.glow.ui.components.OrderMedal
+import app.glow.ui.components.VoiceFace
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -133,9 +135,7 @@ fun MeTab(data: GlowData, go: Go) {
                         Modifier.weight(1f).clip(U.RMd).clickable { openOrder = o }.padding(vertical = 4.dp),
                         horizontalAlignment = Alignment.CenterHorizontally,
                     ) {
-                        Medal(degree, orderColor(o), size = 66.dp) {
-                            Icon(orderIcon(o), null, Modifier.size(18.dp), tint = if (degree > 0) Color.White else U.c.faint)
-                        }
+                        OrderMedal(o, degree, 70.dp)
                         Row(horizontalArrangement = Arrangement.spacedBy(3.dp)) {
                             repeat(3) { i -> Box(Modifier.size(5.dp).clip(CircleShape).background(if (i < degree) U.c.gold else U.c.line)) }
                         }
@@ -149,7 +149,7 @@ fun MeTab(data: GlowData, go: Go) {
         Spacer(Modifier.height(10.dp))
         UCard(onClick = { go.voice() }) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(Modifier.size(44.dp).clip(CircleShape).background(U.c.accentSoft), contentAlignment = Alignment.Center) { Text(s.voice.emoji, fontSize = 22.sp) }
+                Box(Modifier.size(52.dp).clip(CircleShape).background(U.c.accentSoft), contentAlignment = Alignment.Center) { VoiceFace(s.voice, 50.dp) }
                 Spacer(Modifier.width(14.dp))
                 Column(Modifier.weight(1f)) {
                     Text(stringResource(R.string.voice), style = UType.Muted)
@@ -171,9 +171,7 @@ private fun OrderDialog(o: Order, data: GlowData, onCertificate: (Award) -> Unit
     val value = o.value(stats)
     androidx.compose.ui.window.Dialog(onDismissRequest = onDismiss) {
         Column(Modifier.fillMaxWidth().clip(U.RLg).background(U.c.bg).padding(22.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-            Medal(degree, orderColor(o), size = 100.dp) {
-                Icon(orderIcon(o), null, Modifier.size(28.dp), tint = if (degree > 0) Color.White else U.c.faint)
-            }
+            OrderMedal(o, degree, 120.dp)
             Spacer(Modifier.height(10.dp))
             Text(orderName(o), style = UType.Title.copy(fontSize = 21.sp, textAlign = TextAlign.Center))
             Spacer(Modifier.height(6.dp))

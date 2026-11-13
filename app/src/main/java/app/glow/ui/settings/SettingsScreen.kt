@@ -1,5 +1,16 @@
 package app.glow.ui.settings
 
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.Box
+import androidx.compose.ui.draw.clip
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.border
+import app.glow.ui.components.MarbleDot
+import app.glow.ui.theme.MarblePalette
+import app.glow.ui.categoryLabel
+import app.glow.ui.categoryHue
+import app.glow.domain.Category
 import android.Manifest
 import android.content.Intent
 import android.net.Uri
@@ -153,6 +164,25 @@ fun SettingsScreen(settings: Settings, onBack: () -> Unit) {
             SectionTitle(stringResource(R.string.set_feel))
             UCard {
                 SwitchRow(stringResource(R.string.set_haptics), stringResource(R.string.set_haptics_text), settings.haptics, null) { v -> update { it.copy(haptics = v) } }
+            }
+
+            SectionTitle(stringResource(R.string.set_marbles))
+            UCard {
+                Text(stringResource(R.string.set_marbles_text), style = UType.Muted)
+                var open by remember { mutableStateOf<String?>(null) }
+                (Category.entries.map { it.id to it } + listOf("none" to null)).forEach { (id, cat) ->
+                    Row(Modifier.fillMaxWidth().clickable { open = if (open == id) null else id }.padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                        MarbleDot(categoryHue(cat), 26.dp)
+                        Spacer(Modifier.width(12.dp))
+                        Text(categoryLabel(cat), style = UType.Body, modifier = Modifier.weight(1f))
+                    }
+                    if (open == id) FlowRow(Modifier.padding(start = 38.dp, bottom = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        MarblePalette.indices.forEach { i ->
+                            Box(Modifier.clip(CircleShape).clickable { update { s -> s.copy(catColors = s.catColors + (id to i)) }; open = null }
+                                .then(if (i == categoryHue(cat)) Modifier.border(2.dp, U.c.ink, CircleShape) else Modifier).padding(3.dp)) { MarbleDot(i, 30.dp) }
+                        }
+                    }
+                }
             }
 
             SectionTitle(stringResource(R.string.set_appearance))

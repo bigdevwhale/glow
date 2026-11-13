@@ -44,6 +44,8 @@ data class Settings(
     val reframes: Int = 0,
     /** Added to the day so "another one" moves through the praise of the day, here and in the widget. */
     val praiseShift: Int = 0,
+    /** Marble colours the user picked: category id ("home", … "none") to an index in MarblePalette (#6). */
+    val catColors: Map<String, Int> = emptyMap(),
 )
 
 class SettingsStore(context: Context) {
@@ -67,6 +69,7 @@ class SettingsStore(context: Context) {
         sosCount = this[SOS] ?: 0,
         reframes = this[REFRAMES] ?: 0,
         praiseShift = this[SHIFT] ?: 0,
+        catColors = (this[CAT_COLORS] ?: emptySet()).mapNotNull { e -> e.split('=').takeIf { it.size == 2 }?.let { (k, v) -> v.toIntOrNull()?.let { k to it } } }.toMap(),
     )
 
     suspend fun now(): Settings = settings.first()
@@ -89,6 +92,7 @@ class SettingsStore(context: Context) {
             it[SOS] = s.sosCount
             it[REFRAMES] = s.reframes
             it[SHIFT] = s.praiseShift
+            it[CAT_COLORS] = s.catColors.map { (k, v) -> "$k=$v" }.toSet()
         }
     }
 
@@ -108,5 +112,6 @@ class SettingsStore(context: Context) {
         val SOS = intPreferencesKey("sos_count")
         val REFRAMES = intPreferencesKey("reframes")
         val SHIFT = intPreferencesKey("praise_shift")
+        val CAT_COLORS = stringSetPreferencesKey("cat_colors")
     }
 }

@@ -110,6 +110,17 @@ val CategoryColors = listOf(
     Color(0xFFE8A0B8), // none
 )
 
+/** The sixteen marble colours one can give a category, in the order of the marble pictures (marble_0 … marble_15). */
+val MarblePalette = listOf(
+    Color(0xFFE5578C), Color(0xFFE5574A), Color(0xFFEE8A2C), Color(0xFFE0A526),
+    Color(0xFFE8CF3A), Color(0xFF9CC93F), Color(0xFF3FA57A), Color(0xFF2FA5A0),
+    Color(0xFF4FA8DE), Color(0xFF4A86D9), Color(0xFF4B4FB8), Color(0xFF8D63D6),
+    Color(0xFFB794E0), Color(0xFF8E3F86), Color(0xFF9A6A45), Color(0xFFB8B3AE),
+)
+
+/** The palette index each category starts with, close to its old colour. */
+val DefaultCatColors = listOf(3, 6, 9, 11, 2, 0, 7, 12)
+
 val LocalPalette = staticCompositionLocalOf { LightPalette }
 
 val Inter = FontFamily(

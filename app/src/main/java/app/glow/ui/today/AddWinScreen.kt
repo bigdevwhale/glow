@@ -1,5 +1,6 @@
 package app.glow.ui.today
 
+import app.glow.ui.components.CategoryPic
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -248,7 +249,7 @@ fun CategoryChip(c: Category?, selected: Boolean, onClick: () -> Unit) {
             .padding(horizontal = 12.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Icon(categoryIcon(c), null, Modifier.size(16.dp), tint = color)
+        CategoryPic(c, 22.dp)
         Spacer(Modifier.width(6.dp))
         Text(categoryLabel(c), style = UType.Small.copy(color = if (selected) color else U.c.muted, fontSize = 13.5.sp))
     }

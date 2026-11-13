@@ -8,6 +8,17 @@ then close it like any HTML comment. The release notes carry it, and the chat bo
 
 All notable changes to Glow. Versions follow [semantic versioning](https://semver.org/).
 
+## [1.1.0] - 2026-11-13
+
+### Added
+- Pick the colour of each category's marble in the jar: Settings → Marble colours, sixteen glass marbles to choose from; marbles already in the jar change too (#6).
+- New hand-painted art: the five voices have portraits (friend, granny, commentator, the owl mentor, the butler), the categories have their own little pictures, every order has its own medal – bronze, silver and gold by degree – and the jar is a real glass jar of marbles. A new app icon to match.
+
+<!-- tg
+Новое: цвет шариков в банке теперь можно выбрать для каждой категории – в настройках, «Цвета шариков».
+Glow перерисован: у голосов появились портреты, у категорий – свои картинки, у каждого ордена – своя медаль, а банка стала настоящей стеклянной банкой. И новый значок.
+-->
+
 ## [1.0.2] - 2026-11-07
 
 ### Fixed
