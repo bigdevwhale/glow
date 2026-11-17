@@ -8,6 +8,15 @@ then close it like any HTML comment. The release notes carry it, and the chat bo
 
 All notable changes to Glow. Versions follow [semantic versioning](https://semver.org/).
 
+## [1.2.3] - 2026-11-18
+
+### Added
+- Support Glow: a card in settings that opens the Stillcraft support page in the browser. The app stays free, with no ads and nothing to buy inside.
+
+<!-- tg
+В настройках появилась карточка «Поддержать Glow» – она открывает страницу поддержки StillCraft. Приложение остаётся бесплатным и без рекламы.
+-->
+
 ## [1.2.2] - 2026-11-18
 
 ### Fixed

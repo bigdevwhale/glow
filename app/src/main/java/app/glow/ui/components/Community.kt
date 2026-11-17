@@ -3,17 +3,24 @@ package app.glow.ui.components
 import android.content.Intent
 import android.net.Uri
 import androidx.annotation.StringRes
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -29,6 +36,33 @@ object Community {
     const val IDEA = "${BOT}wish_$SLUG"
     const val FOLLOW = "${BOT}f_$SLUG"
     const val CHAT = "https://t.me/+Q4gFEDk8O842OGVi"
+    /** StillCraft's support page, in the browser: nothing is sold or unlocked in the app. */
+    const val SUPPORT = "https://bigdevwhale.github.io/stillcraft/support/"
+}
+
+/** The app is free; this card is how it stays so. Opens the support page in the browser. */
+@Composable
+fun SupportCard() {
+    val ctx = LocalContext.current
+    Column(
+        Modifier.fillMaxWidth().padding(top = 8.dp)
+            .background(Brush.linearGradient(listOf(U.c.accentSoft, U.c.goldSoft)), U.RLg)
+            .padding(16.dp),
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Image(painterResource(R.drawable.orb_sun), null, Modifier.size(56.dp))
+            Column(Modifier.weight(1f).padding(start = 12.dp)) {
+                Text(stringResource(R.string.support_title), style = UType.Strong)
+                Text(stringResource(R.string.support_text), style = UType.Muted)
+            }
+        }
+        PrimaryButton(
+            stringResource(R.string.support_button),
+            { runCatching { ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Community.SUPPORT)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) } },
+            Modifier.fillMaxWidth().padding(top = 12.dp),
+            icon = Icons.Rounded.Favorite,
+        )
+    }
 }
 
 /** Report a bug, suggest an idea, follow updates, join the chat; each opens Telegram. */

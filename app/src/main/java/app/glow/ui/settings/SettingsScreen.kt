@@ -68,6 +68,7 @@ import app.glow.ui.components.Chip
 import app.glow.ui.components.CommunityLinks
 import app.glow.ui.components.ConfirmDialog
 import app.glow.ui.components.SectionTitle
+import app.glow.ui.components.SupportCard
 import app.glow.ui.components.TimeDialog
 import app.glow.ui.components.TopBar
 import app.glow.ui.components.UCard
@@ -213,6 +214,8 @@ fun SettingsScreen(settings: Settings, onBack: () -> Unit) {
                     }
                 }
             }
+
+            SupportCard()
 
             CommunityLinks()
 

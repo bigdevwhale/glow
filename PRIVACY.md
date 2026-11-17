@@ -40,6 +40,8 @@ Nothing leaves the phone unless you send it yourself:
   where the file goes from there is up to you.
 - **Community links** in settings open Telegram or your browser, only when you tap them; what you do there is
   governed by those services' own policies.
+- **Support** in settings opens Stillcraft's support page in your browser. Nothing is sold or unlocked in the
+  app, and the app learns nothing about whether or how you support it.
 - **Device backup.** Android may include the app's data in your own device backup to your Google account, if
   you have that turned on in system settings.
 
@@ -111,6 +113,8 @@ Glow — карманный фанат под Android: запиши победу
   читает его обратно; дальше файл ваш.
 - **Ссылки на сообщество** в настройках открывают Telegram или браузер, только когда вы на них нажимаете;
   там действуют правила этих сервисов.
+- **«Поддержать»** в настройках открывает страницу поддержки Stillcraft в браузере. В приложении ничего не
+  продаётся и не открывается, и оно ничего не узнаёт о том, поддержали вы автора или нет.
 - **Резервная копия устройства.** Android может включить данные приложения в резервную копию устройства в
   вашем аккаунте Google, если она включена в настройках.
 

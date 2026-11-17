@@ -293,6 +293,9 @@
     <string name="widget_name">Praise of the day</string>
     <string name="widget_desc">A kind word on your home screen</string>
     <!-- Community: the StillCraft bot on Telegram -->
+    <string name="support_title">Support Glow</string>
+    <string name="support_text">Glow is free, with no ads and no account. If it cheers you up, you can support its author.</string>
+    <string name="support_button">Support</string>
     <string name="community_title">Community</string>
     <string name="community_sub">The app is made together with the people who use it. It all goes through the StillCraft bot on Telegram.</string>
     <string name="community_bug">Report a bug</string>

@@ -295,6 +295,9 @@
     <string name="widget_name">Похвала дня</string>
     <string name="widget_desc">Доброе слово на главном экране</string>
     <!-- Community: the StillCraft bot on Telegram -->
+    <string name="support_title">Поддержать Glow</string>
+    <string name="support_text">Glow бесплатный, без рекламы и аккаунта. Если он тебя радует, можно поддержать автора.</string>
+    <string name="support_button">Поддержать</string>
     <string name="community_title">Сообщество</string>
     <string name="community_sub">Приложение делается вместе с теми, кто им пользуется. Всё идёт через бота StillCraft в Telegram.</string>
     <string name="community_bug">Сообщить о баге</string>
