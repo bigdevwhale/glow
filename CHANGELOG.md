@@ -8,6 +8,19 @@ then close it like any HTML comment. The release notes carry it, and the chat bo
 
 All notable changes to Glow. Versions follow [semantic versioning](https://semver.org/).
 
+## [1.2.1] - 2026-11-17
+
+### Fixed
+- «Other» can be picked as a kind of win: it is a chip of its own at the end of the list, as it is a marble of its own in the jar (#7).
+
+### Changed
+- The glow orb is a hand-painted sun now, slowly turning and breathing, in place of the drawn ball with thin rays.
+
+<!-- tg
+При добавлении победы появился шарик «Другое» – теперь его можно выбрать, как и остальные.
+Сияющий шарик с лучами стал нарисованным солнышком.
+-->
+
 ## [1.2.0] - 2026-11-13
 
 ### Added
