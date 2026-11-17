@@ -63,6 +63,12 @@ android {
     androidResources {
         generateLocaleConfig = true
     }
+    // One bundle with every language: with splits Play installs only the phone's, and the in-app switch breaks.
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
     lint {
         error += "MissingTranslation"
         // Dependency versions are pinned on purpose (AGP 8.13 + Kotlin 2.2 toolchain).

@@ -52,9 +52,9 @@ Glow is the other voice. Tell it about a win, any win, and it cheers. It keeps y
   </tr>
   <tr>
     <td><img src="docs/screenshots/sos.png" alt="I feel bad" /></td>
-    <td><img src="docs/screenshots/me.png" alt="Streak, stats and orders" /></td>
+    <td><img src="docs/screenshots/me.png" alt="Stats and orders" /></td>
     <td><img src="docs/screenshots/report.png" alt="Weekly report" /></td>
-    <td><img src="docs/screenshots/certificate.png" alt="Certificate of honour" /></td>
+    <td><img src="docs/screenshots/translate.png" alt="Self-criticism translator" /></td>
   </tr>
 </table>
 
@@ -96,7 +96,7 @@ app/src/main/java/app/glow/
 └── ui/          today, jar, kind words, me, onboarding, settings
 ```
 
-Build it with `./gradlew assembleDebug`. `./gradlew installDebug -Pdemo` installs `app.glow.demo` with made-up wins, the one used for these screenshots.
+Build it with `./gradlew assembleDebug`. `./gradlew installDebug -Pdemo` installs `app.glow.demo` with made-up wins, the one used for these screenshots; `python tools/shots.py` builds them from its captures in `docs/google-play/raw`.
 
 ## License
 

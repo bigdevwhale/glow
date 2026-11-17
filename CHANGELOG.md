@@ -8,6 +8,18 @@ then close it like any HTML comment. The release notes carry it, and the chat bo
 
 All notable changes to Glow. Versions follow [semantic versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+- Russian: the self-criticism translator follows the reader's gender everywhere – «человеком, а не неудачницей», «ты не нужна», «назвать себя тупой, ленивой или неудачницей».
+
+### Changed
+- Releases also carry an Android App Bundle with every language in it, for Google Play.
+
+<!-- tg
+Переводчик с самокритичного больше не путается в роде: «человеком, а не неудачницей».
+-->
+
 ## [1.2.1] - 2026-11-17
 
 ### Fixed

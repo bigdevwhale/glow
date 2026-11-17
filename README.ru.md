@@ -52,9 +52,9 @@ Glow — другой голос. Расскажи ему о победе, лю�
   </tr>
   <tr>
     <td><img src="docs/screenshots/sos.ru.png" alt="Мне плохо" /></td>
-    <td><img src="docs/screenshots/me.ru.png" alt="Серия, статистика и ордена" /></td>
+    <td><img src="docs/screenshots/me.ru.png" alt="Статистика и ордена" /></td>
     <td><img src="docs/screenshots/report.ru.png" alt="Отчёт за неделю" /></td>
-    <td><img src="docs/screenshots/certificate.ru.png" alt="Почётная грамота" /></td>
+    <td><img src="docs/screenshots/translate.ru.png" alt="Переводчик с самокритичного" /></td>
   </tr>
 </table>
 
@@ -86,7 +86,7 @@ APK — в **[Releases](https://github.com/bigdevwhale/glow/releases/latest)**, 
 - Переводчик ищет основы слов для десяти ловушек мышления, всё на устройстве.
 - Серии, ордена и отчёт за неделю — чистые функции истории (`domain/`), покрытые юнит-тестами.
 
-Сборка: `./gradlew assembleDebug`. `./gradlew installDebug -Pdemo` ставит `app.glow.demo` с придуманными победами — на нём сняты эти скриншоты.
+Сборка: `./gradlew assembleDebug`. `./gradlew installDebug -Pdemo` ставит `app.glow.demo` с придуманными победами — на нём сняты эти скриншоты; `python tools/shots.py` собирает их из снимков в `docs/google-play/raw`.
 
 ## Лицензия
 
