@@ -172,6 +172,8 @@ fun AddWinScreen(id: Long, presetCategory: String, data: GlowData, go: Go) {
                 Category.entries.forEach { c ->
                     CategoryChip(c, c == category) { category = if (category == c) null else c }
                 }
+                // «Other» is a marble of its own in the jar, so it can be picked here too: it is a win with no category.
+                CategoryChip(null, category == null) { category = null }
             }
 
             if (loaded != null) {
