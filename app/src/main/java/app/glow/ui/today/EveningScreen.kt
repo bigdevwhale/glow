@@ -72,7 +72,7 @@ fun EveningScreen(data: GlowData, onBack: () -> Unit) {
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Spacer(Modifier.weight(1f))
-                    GlowOrb(Modifier.size(180.dp), strength = 0.5f, color = U.c.violet) { Text("🌙", fontSize = 44.sp) }
+                    GlowOrb(Modifier.size(180.dp), strength = 0.5f, color = U.c.violet, painted = false) { Text("🌙", fontSize = 44.sp) }
                     Spacer(Modifier.height(18.dp))
                     val line = voiceText(s.voice).evening.pick(data.stats.today.toEpochDay())
                     Text(praise(line), style = UType.Display.copy(fontSize = 26.sp, lineHeight = 33.sp, textAlign = TextAlign.Center))

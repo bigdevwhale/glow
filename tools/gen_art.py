@@ -1,4 +1,4 @@
-"""Draws Glow's art with the Codex CLI image tool: the voices, category icons, orders, marbles, the jar and the icon.
+"""Draws Glow's art with the Codex CLI image tool: the voices, category icons, orders, marbles, the jar, the orb and the icon.
 
 Codex saves images into ~/.codex/generated_images/<session>/; the image of the run's own session is copied to
 art/sheets/<name>.png. Sheets already there are skipped; delete one to draw it again.
@@ -87,6 +87,10 @@ Colours, left to right, top to bottom:
     "jar": HEAD + f"""Image: one empty glass jar for collecting marbles, seen straight from the front, standing upright: a round-shouldered mason jar with a short wide neck, a twine bow tied round the neck and a small blank cork lid, clear glass with soft highlights and a faint golden glow inside. The jar is centred and fills most of the height.
 {STYLE}
 Portrait image, {BG}. The inside of the jar is empty and see-through (show the magenta through the glass, lightly tinted).""",
+
+    "orb": HEAD + f"""Image: one glowing orb of light, the brand mark of "Glow", a gentle self-praise app: a small round sun seen straight on, a warm glowing ball (cream-white at the centre, honey gold, rose pink at the rim) with a soft painted highlight, and a ring of twelve short soft painted rays around it, the rays slightly different in length, all pointing outward evenly. No face, no eyes, no text. Centred, the whole orb and its rays filling about 85% of the square, with clear margin.
+{STYLE}
+Square image, {BG}. Keep the magenta clean between the rays.""",
 
     "icon": HEAD + f"""Image: an app icon for "Glow", a gentle self-praise app: a small glass jar full of glowing pink, gold and violet marbles, giving off a warm golden glow, with two tiny sparkles. Simple, bold, readable at small size, centred, filling about 70% of the square.
 {STYLE}

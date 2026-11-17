@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import app.glow.ui.theme.U
@@ -38,7 +39,12 @@ import kotlin.random.Random
 
 /** The brand mark: a soft orb of light that breathes. [strength] 0..1 makes it brighter and larger. */
 @Composable
-fun GlowOrb(modifier: Modifier = Modifier, strength: Float = 0.6f, color: Color = U.c.accent, warm: Color = U.c.gold, content: @Composable () -> Unit = {}) {
+fun GlowOrb(
+    modifier: Modifier = Modifier, strength: Float = 0.6f, color: Color = U.c.accent, warm: Color = U.c.gold,
+    /** The painted sun; false keeps the drawn core and rays in [color], as for the evening's violet moon. */
+    painted: Boolean = true,
+    content: @Composable () -> Unit = {},
+) {
     val t = rememberInfiniteTransition(label = "orb")
     val pulse by t.animateFloat(0f, 1f, infiniteRepeatable(tween(2600, easing = LinearEasing), RepeatMode.Reverse), label = "pulse")
     val spin by t.animateFloat(0f, 360f, infiniteRepeatable(tween(18000, easing = LinearEasing)), label = "spin")
@@ -49,24 +55,36 @@ fun GlowOrb(modifier: Modifier = Modifier, strength: Float = 0.6f, color: Color 
             val s = 0.55f + 0.45f * strength
             drawCircle(Brush.radialGradient(listOf(color.copy(alpha = 0.10f + 0.12f * pulse * s), Color.Transparent), c, r), r, c)
             drawCircle(Brush.radialGradient(listOf(warm.copy(alpha = 0.35f * s), color.copy(alpha = 0.18f * s), Color.Transparent), c, r * (0.7f + 0.06f * pulse)), r * (0.7f + 0.06f * pulse), c)
-            // Rays, slowly turning.
-            rotate(spin, c) {
-                repeat(12) { i ->
-                    val a = i * 30.0 * PI / 180
-                    val r0 = r * 0.42f
-                    val r1 = r * (0.62f + 0.06f * ((i % 3) / 2f) + 0.04f * pulse)
-                    drawLine(
-                        warm.copy(alpha = 0.22f * s),
-                        Offset(c.x + r0 * cos(a).toFloat(), c.y + r0 * sin(a).toFloat()),
-                        Offset(c.x + r1 * cos(a).toFloat(), c.y + r1 * sin(a).toFloat()),
-                        strokeWidth = r * 0.025f,
-                        cap = androidx.compose.ui.graphics.StrokeCap.Round,
-                    )
+            if (!painted) {
+                // Rays, slowly turning.
+                rotate(spin, c) {
+                    repeat(12) { i ->
+                        val a = i * 30.0 * PI / 180
+                        val r0 = r * 0.42f
+                        val r1 = r * (0.62f + 0.06f * ((i % 3) / 2f) + 0.04f * pulse)
+                        drawLine(
+                            warm.copy(alpha = 0.22f * s),
+                            Offset(c.x + r0 * cos(a).toFloat(), c.y + r0 * sin(a).toFloat()),
+                            Offset(c.x + r1 * cos(a).toFloat(), c.y + r1 * sin(a).toFloat()),
+                            strokeWidth = r * 0.025f,
+                            cap = androidx.compose.ui.graphics.StrokeCap.Round,
+                        )
+                    }
                 }
+                val core = r * (0.36f + 0.03f * pulse)
+                drawCircle(Brush.radialGradient(listOf(Color.White, warm, color), Offset(c.x - core * 0.3f, c.y - core * 0.35f), core * 1.5f), core, c)
             }
-            val core = r * (0.36f + 0.03f * pulse)
-            drawCircle(Brush.radialGradient(listOf(Color.White, warm, color), Offset(c.x - core * 0.3f, c.y - core * 0.35f), core * 1.5f), core, c)
         }
+        // The painted sun (art/sheets/orb.png), slowly turning and breathing; fainter where the orb is a backdrop.
+        if (painted) androidx.compose.foundation.Image(
+            androidx.compose.ui.res.painterResource(app.glow.R.drawable.orb_sun), null,
+            Modifier.fillMaxSize(0.74f).graphicsLayer {
+                val k = 1f + 0.05f * pulse
+                scaleX = k; scaleY = k
+                rotationZ = spin
+                alpha = (0.2f + 1.6f * (strength - 0.2f)).coerceIn(0.25f, 1f)
+            },
+        )
         content()
     }
 }

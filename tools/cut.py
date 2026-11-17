@@ -7,6 +7,7 @@ categories (4×2)  cat_home … cat_care, cat_none
 orders (4×4)      order_wins … order_care (Order enum order)
 marbles (4×4)     marble_0 … marble_15 (MarblePalette order)
 jar               jar_glass
+orb               orb_sun (the brand orb: a painted sun, square, centred)
 icon              the launcher foreground, in drawable-nodpi as ic_launcher_art (432 px, the 66/108 safe zone kept)
 """
 from pathlib import Path
@@ -133,6 +134,15 @@ def save(im, name):
     im.save(OUT / f"{name}.webp", "WEBP", quality=90, method=6)
 
 
+def orb():
+    """The painted sun of GlowOrb, on a square so it turns about its middle."""
+    if not (SHEETS / "orb.png").exists():
+        return
+    o = key(Image.open(SHEETS / "orb.png"))
+    o = o.crop(o.getchannel("A").point(lambda v: 255 if v > 30 else 0).getbbox())
+    save(square(o, 512), "orb_sun")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     for n, fr in zip(VOICES, frames(SHEETS / "voices.png", 3, 2, 360)):
@@ -148,6 +158,7 @@ def main():
         h = h.crop(h.getchannel("A").point(lambda v: 255 if v > 30 else 0).getbbox())
         h.thumbnail((192, 192), Image.LANCZOS)
         save(h, "cat_hobby")
+    orb()
     jar = key(Image.open(SHEETS / "jar.png"), glass=True)
     jar = jar.crop(jar.getchannel("A").point(lambda v: 255 if v > 30 else 0).getbbox())
     jar.thumbnail((720, 720), Image.LANCZOS)
