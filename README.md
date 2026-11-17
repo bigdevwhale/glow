@@ -9,11 +9,14 @@
 *Write down what you did, from washing the dishes to landing the job, and get praised for it. A jar that fills with your wins, five voices to cheer you on, an SOS for hard moments and a translator for your inner critic. Free, no ads, no account, works offline.*
 
 [![Android CI](https://github.com/bigdevwhale/glow/actions/workflows/android.yml/badge.svg)](https://github.com/bigdevwhale/glow/actions/workflows/android.yml)
+[![Google Play](https://img.shields.io/badge/Google_Play-get_it-34A853?logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=app.glow)
 [![Release](https://img.shields.io/github/v/release/bigdevwhale/glow?color=DB3F7A&label=download&logo=android)](https://github.com/bigdevwhale/glow/releases/latest)
 ![Android 8.0+](https://img.shields.io/badge/Android-8.0%2B-DB3F7A?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF?logo=kotlin&logoColor=white)
 ![Languages](https://img.shields.io/badge/lang-EN%20%7C%20RU-D08A10)
 [![License: MIT](https://img.shields.io/badge/license-MIT-FCE4EC)](LICENSE)
+
+**[Get it on Google Play](https://play.google.com/store/apps/details?id=app.glow)** · [Download APK](https://github.com/bigdevwhale/glow/releases/latest/download/Glow.apk) · Android 8+
 
 **English** · [Русский](README.ru.md) · [Website](https://bigdevwhale.github.io/stillcraft/apps/glow/) · [Changelog](CHANGELOG.md)
 
@@ -68,7 +71,7 @@ Glow is a kind companion, not a treatment. If things have felt heavy for a long 
 
 ## Download
 
-Get the APK from **[Releases](https://github.com/bigdevwhale/glow/releases/latest)**, or the debug APK attached to any [CI run](https://github.com/bigdevwhale/glow/actions/workflows/android.yml). Glow needs Android 8.0 (API 26) or newer.
+Get it on **[Google Play](https://play.google.com/store/apps/details?id=app.glow)**, or take the APK from **[Releases](https://github.com/bigdevwhale/glow/releases/latest)**, or the debug APK attached to any [CI run](https://github.com/bigdevwhale/glow/actions/workflows/android.yml). Glow needs Android 8.0 (API 26) or newer.
 
 > [!TIP]
 > On Xiaomi (MIUI / HyperOS), Huawei and some other phones, allow **Autostart** and remove battery limits so the morning praise and evening reminder arrive on time.

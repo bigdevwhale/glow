@@ -191,4 +191,5 @@ Meditation — круг для дыхания; если покажется на�
 
 ## После публикации
 
-Добавьте в README бейдж и ссылку `https://play.google.com/store/apps/details?id=app.glow`.
+Glow в Play с 18 ноября 2026: `https://play.google.com/store/apps/details?id=app.glow`. Бейдж и ссылки — в README,
+строка «Get it on Google Play» — в заметках каждого релиза (release.yml), ссылка — на странице сайта.

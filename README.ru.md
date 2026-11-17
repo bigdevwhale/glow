@@ -9,11 +9,14 @@
 *Запиши, что у тебя получилось, от помытой посуды до новой работы, и получи за это похвалу. Банка, которая наполняется победами, пять голосов поддержки, SOS для трудных минут и переводчик для внутреннего критика. Бесплатно, без рекламы и аккаунта, работает офлайн.*
 
 [![Android CI](https://github.com/bigdevwhale/glow/actions/workflows/android.yml/badge.svg)](https://github.com/bigdevwhale/glow/actions/workflows/android.yml)
+[![Google Play](https://img.shields.io/badge/Google_Play-скачать-34A853?logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=app.glow)
 [![Release](https://img.shields.io/github/v/release/bigdevwhale/glow?color=DB3F7A&label=скачать&logo=android)](https://github.com/bigdevwhale/glow/releases/latest)
 ![Android 8.0+](https://img.shields.io/badge/Android-8.0%2B-DB3F7A?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF?logo=kotlin&logoColor=white)
 ![Языки](https://img.shields.io/badge/lang-EN%20%7C%20RU-D08A10)
 [![License: MIT](https://img.shields.io/badge/license-MIT-FCE4EC)](LICENSE)
+
+**[Скачать в Google Play](https://play.google.com/store/apps/details?id=app.glow)** · [Скачать APK](https://github.com/bigdevwhale/glow/releases/latest/download/Glow.apk) · Android 8+
 
 [English](README.md) · **Русский** · [Сайт](https://bigdevwhale.github.io/stillcraft/apps/glow/) · [История изменений](CHANGELOG.md)
 
@@ -68,7 +71,7 @@ Glow — добрый спутник, а не лечение. Если тяже�
 
 ## Скачать
 
-APK — в **[Releases](https://github.com/bigdevwhale/glow/releases/latest)**, или отладочный APK из любого [запуска CI](https://github.com/bigdevwhale/glow/actions/workflows/android.yml). Нужен Android 8.0 (API 26) или новее.
+Glow — в **[Google Play](https://play.google.com/store/apps/details?id=app.glow)**; APK — в **[Releases](https://github.com/bigdevwhale/glow/releases/latest)**, или отладочный APK из любого [запуска CI](https://github.com/bigdevwhale/glow/actions/workflows/android.yml). Нужен Android 8.0 (API 26) или новее.
 
 > [!TIP]
 > На Xiaomi (MIUI / HyperOS), Huawei и некоторых других телефонах разреши **автозапуск** и сними ограничения батареи, чтобы утренняя похвала и вечернее напоминание приходили вовремя.
